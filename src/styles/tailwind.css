@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .text-info {
+    @apply text-gray-600 font-light;
+  }
+}
