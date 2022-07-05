@@ -16,7 +16,7 @@ function Login() {
           className="h-full w-full object-cover contrast-120"
         />
       </div>
-      <div className="bg-[#070102]/95 text-white flex flex-col justify-center items-center sm:col-span-6">
+      <div className="bg-[#070102]/95 text-white flex flex-col justify-center items-center sm:col-span-6 relative">
         <form className="max-w-[400px] w-full mx-auto p-8 space-y-6 font-poppins">
           <h2 className="font-semibold text-[24px] text-center leading-4">
             Lets get started
@@ -68,6 +68,13 @@ function Login() {
             <p>Forgot your password?</p>
           </div> */}
         </form>
+
+        <p className="max-w-[450px] w-full mx-auto font-poppins absolute bottom-20 text-center text-xs">
+          By clicking “Continue” above, you acknowledge that you have read and
+          understood, and agree to Craft’s{" "}
+          <span className="font-semibold underline">Terms & Conditions</span>{" "}
+          and <span className="font-semibold underline">Privacy Policy</span>.
+        </p>
       </div>
     </div>
   );
