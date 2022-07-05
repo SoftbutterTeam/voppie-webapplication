@@ -4,7 +4,7 @@ import { PrimBackground } from "../page-bg";
 interface Props {
   children: React.ReactElement;
 }
-export default function MinimalLayout(props: Props) {
+export function MinimalLayout(props: Props) {
   return (
     <PrimBackground>
       <PrimHeader />
