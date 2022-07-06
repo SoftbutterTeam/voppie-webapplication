@@ -8,11 +8,17 @@ export function FullAuthLayout(props: Props) {
 
   return (
     <PrimBackground>
-      <div className="grid grid-cols-1 sm:grid-cols-10 h-screen w-full">
-        <div className=" flex flex-col justify-center items-center sm:col-span-6">
+      <div
+        id="fullathlayout-01"
+        className="grid grid-cols-1 md:grid-cols-10 h-screen w-full"
+      >
+        <div
+          id="fullathlayout-01"
+          className=" flex flex-col  justify-center items-center md:col-span-6"
+        >
           {mainContent}
         </div>
-        <div className="hidden sm:block sm:col-span-4">sdfdsf</div>
+        <div className="hidden md:block md:col-span-4">sdfdsf</div>
       </div>
     </PrimBackground>
   );
