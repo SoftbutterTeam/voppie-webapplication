@@ -24,17 +24,17 @@ function Login() {
           <p className="text-center text-[#9da0a3]">
             Please enter you email to continue
           </p>
-          <div className="flex flex-col text-gray-500 py-2">
+          <div className="flex justify-center text-gray-500 py-2">
             <input
               type="text"
               placeholder="Enter your email address"
-              className="rounded-md outline-none focus:outline-none"
+              className="rounded-md outline-none focus:outline-none placeholder:text-xs sm:placeholder:text-base  w-full min-w-130 mx-1"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="flex justify-center">
             <button
-              className={`bg-[#1d5b72] w-full py-2 rounded-md -mt-3 ${
+              className={`bg-[#1d5b72] w-full py-2 rounded-md -mt-3 min-w-130 mx-1 ${
                 email === "" ? "cursor-not-allowed " : "cursor-pointer"
               }`}
               onClick={() => {

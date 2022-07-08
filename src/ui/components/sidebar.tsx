@@ -1,6 +1,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { XIcon } from "@heroicons/react/outline";
+import { PlusIcon, XIcon } from "@heroicons/react/outline";
 import { navigation } from "../../data/mock";
 
 const avatar = require("../../assets/images/creator.png");
@@ -39,7 +39,7 @@ function Sidebar({ setSidebarOpen, sidebarOpen }: any) {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white">
+            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-white ">
               <Transition.Child
                 as={Fragment}
                 enter="ease-in-out duration-300"
@@ -60,7 +60,7 @@ function Sidebar({ setSidebarOpen, sidebarOpen }: any) {
                   </button>
                 </div>
               </Transition.Child>
-              <div className="flex items-center pl-4">
+              <div className="flex items-center pl-4 border-b-[1px] pb-1 border-gray-200">
                 <img
                   className="h-10 w-10 rounded-full"
                   src={avatar}
@@ -68,8 +68,14 @@ function Sidebar({ setSidebarOpen, sidebarOpen }: any) {
                 />
                 <p className="text-2xl pl-3">Voppi</p>
               </div>
+
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
                 <nav className="px-2 space-y-1">
+                  <div>
+                    <button className="px-6 py-3 bg-sky-blue hover:bg-blue-500 duration-200 cursor-pointer text-white rounded-md my-3">
+                      Create Playlist
+                    </button>
+                  </div>
                   {navigation.map((item) => (
                     <div
                       key={item.name}
@@ -121,7 +127,16 @@ function Sidebar({ setSidebarOpen, sidebarOpen }: any) {
             />
             <p className="text-2xl pl-3">Voppi</p>
           </div>
-          <div className="mt-5 flex-grow flex flex-col">
+          <div className="flex items-center ml-3 mt-3">
+            <button
+              className="pr-[1.5rem] pl-[0.5rem] py-3 bg-sky-blue flex items-center   
+                      justify-start hover:bg-blue-500 duration-200 cursor-pointer text-white rounded-md my-3"
+            >
+              <PlusIcon className="w-5 h-5 mr-2" />
+              Create Playlist
+            </button>
+          </div>
+          <div className=" flex-grow flex flex-col">
             <nav className="flex-1 px-2 pb-4 space-y-1">
               {navigation.map((item) => (
                 <div
