@@ -7,18 +7,33 @@ import { googleI } from "../../../../assets/icons/services";
 export function Login() {
   return (
     <AuthLayout>
-      <form className="max-w-sm w-full mx-auto p-8 space-y-3 ">
-        <input className="cursor-pointer bg- shadow-sm   w-full py-2 rounded-lg -mt-3" />
+      <form className="max-w-sm w-full mx-auto p-8 space-y-4 ">
+        <input
+          className="cursor-auto bg-slate-50 bg-amber-50 border  w-full py-2 rounded-lg -mt-3"
+          placeholder=""
+        />
+        <input
+          className="cursor-auto bg-slate-50 bg-amber-50 border   w-full py-2 rounded-lg -mt-3"
+          placeholder=""
+        />
 
         <button className="cursor-pointer bg-orange-600 text-white  shadow   w-full py-2 rounded-lg -mt-3">
           Continue
         </button>
+        <div className="w-full flex py-2 items-center">
+          <div className="bg-gray-200 shadow h-[1px] w-full ml-1" />
+          <p className="mx-2 text-slate-500 text-sm">or</p>
+          <div className="bg-gray-200 shadow h-[1px] w-full ml-1" />
+        </div>
 
         <button className="cursor-pointer bg-black text-white  shadow-sm   w-full py-2 rounded-lg -mt-3">
           Continue with Apple
         </button>
-        <button className="cursor-pointer  border shadow-sm   w-full py-2 rounded-lg -mt-3">
+        <button className="cursor-pointer bg-white  border shadow-sm   w-full py-2 rounded-lg -mt-3">
           Continue with Google
+        </button>
+        <button className="cursor-pointer bg-blue-500 text-white      w-full py-2 rounded-lg -mt-3">
+          Continue with Facebook
         </button>
       </form>
       <p className="max-w-[450px] w-full mx-auto  absolute bottom-20 px-5 text-center text-ti text-neutral-400">
