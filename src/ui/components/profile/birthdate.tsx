@@ -8,6 +8,7 @@ function Birthdate({
   months,
   years,
   handleRegisterChange,
+  dateError
 }: any) {
   return (
     <div className="flex space-x-2">
@@ -32,12 +33,12 @@ function Birthdate({
           </option>
         ))}
       </select>
-      {/* {dateError && (
-      <div className="input_error">
+      {dateError && (
+      <div className="relative py-2 px-1 bg-error-red w-full text-white text-sm mb-3 rounded-md">
         <div className="error_arrow_bottom"></div>
         {dateError}
       </div>
-    )} */}
+    )}
     </div>
   );
 }
