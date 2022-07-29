@@ -25,7 +25,7 @@
 }
 
 @layer components {
-  .primary-input {
+  .main-input {
     @apply cursor-auto border-gray-300 w-full py-2 rounded-md placeholder:text-black placeholder:text-opacity-30 placeholder:font-light;
   }
 }

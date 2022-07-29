@@ -49,19 +49,19 @@ function LoginPanel() {
     return (
       <form className="max-w-sm w-full mx-auto p-8 space-y-4  ">
         <input
-          className="primary-input"
+          className="main-input"
           type="text"
           autoComplete="name"
           placeholder="full name or nickname"
         />
         <input
-          className="primary-input"
+          className="main-input"
           type="email"
           autoComplete="email"
           placeholder="email address"
         />
         <input
-          className="primary-input"
+          className="main-input"
           type="password"
           autoComplete="new-password"
           placeholder="password"
