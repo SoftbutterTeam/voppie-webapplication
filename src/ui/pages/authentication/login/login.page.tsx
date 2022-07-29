@@ -1,68 +1,101 @@
 import React from "react";
-import { AuthLayout } from "../../../layouts/page-layout";
+import { LeftPanelledLayout } from "../../../layouts/page-layout";
 
 import { FaApple } from "react-icons/fa";
 import { googleI } from "../../../../assets/icons/services";
 
-export function Login() {
+export function LoginPage() {
   return (
-    <AuthLayout>
-      <form className="max-w-sm w-full mx-auto p-8 space-y-4 ">
-        <input
-          className="cursor-auto bg-slate-50 bg-amber-50 border  w-full py-2 rounded-lg -mt-3"
-          placeholder=""
-        />
-        <input
-          className="cursor-auto bg-slate-50 bg-amber-50 border   w-full py-2 rounded-lg -mt-3"
-          placeholder=""
-        />
-
-        <button className="cursor-pointer bg-orange-600 text-white  shadow   w-full py-2 rounded-lg -mt-3">
-          Continue
-        </button>
-        <div className="w-full flex py-2 items-center">
-          <div className="bg-gray-200 shadow h-[1px] w-full ml-1" />
-          <p className="mx-2 text-slate-500 text-sm">or</p>
-          <div className="bg-gray-200 shadow h-[1px] w-full ml-1" />
-        </div>
-
-        <button className="cursor-pointer bg-black text-white  shadow-sm   w-full py-2 rounded-lg -mt-3">
-          Continue with Apple
-        </button>
-        <button className="cursor-pointer bg-white  border shadow-sm   w-full py-2 rounded-lg -mt-3">
-          Continue with Google
-        </button>
-        <button className="cursor-pointer bg-blue-500 text-white      w-full py-2 rounded-lg -mt-3">
-          Continue with Facebook
-        </button>
-      </form>
-      <p className="max-w-[450px] w-full mx-auto  absolute bottom-20 px-5 text-center text-ti text-neutral-400">
-        By clicking “Continue” above, you acknowledge that you have read and
-        understood, and agree to Company{" "}
-        <span className="font-semibold underline">Terms & Conditions</span> and{" "}
-        <span className="font-semibold underline">Privacy Policy</span>.
-      </p>
-    </AuthLayout>
+    <LeftPanelledLayout>
+      <LoginPanel />
+      <TermsandconditionText />
+    </LeftPanelledLayout>
   );
+
+  function TermsandconditionText() {
+    return (
+      <p className="max-w-[450px] w-full mx-auto  lg:absolute bottom-20  px-5 text-center text-ti font-light text-neutral-400">
+        By joining Voppie, you agree to our{" "}
+        <span className="font-light underline">Terms & Conditions</span> and{" "}
+        <span className="font-light underline">Privacy Policy</span>.
+      </p>
+    );
+  }
 }
 
 function LoginPanel() {
+  function hasEmailLoginError(): boolean {
+    return true;
+  }
+  //* border can be removed - it was meant for popup design demostration. but that will be in a parent emelent to loginpanel
   return (
-    <>
-      <form className="max-w-[400px] w-full mx-auto p-8 space-y-6 ">
-        <div className="flex justify-center">
-          <button className="cursor-pointer bg-black text-white w-full py-2 rounded-md -mt-3">
-            Continue with Apple
-          </button>
-        </div>
-      </form>
+    <div className="max-w-md overflow-hidden rounded-xl border bg-white shadow-black  shaodw-md text-center py-5 ">
+      <h1 className="text-xl font-bold mt-5 "> Log in to Voppie</h1>
+      <Loginform />
+      <p className="text-sm">Don't have an account yet? Join</p>
+    </div>
+  );
 
-      <p className="max-w-[450px] w-full mx-auto font-poppins absolute bottom-20 text-center text-xs">
-        By clicking “Continue” above, you acknowledge that you have read and
-        understood, and agree to Craft’s{" "}
-        <span className="font-semibold underline">Terms & Conditions</span> and{" "}
-        <span className="font-semibold underline">Privacy Policy</span>.
-      </p>
-    </>
+  function Loginform() {
+    return (
+      <form className="max-w-sm w-full mx-auto p-8 space-y-4  ">
+        <InputA1 type="email" placeholder="email address" />
+        <InputA1 type="password" placeholder="password" />
+        {hasEmailLoginError() && <p className="text-sm">Forgot password?</p>}
+
+        <ButtonA1 className=" bg-orange-600 font-medium text-white border-0 ">
+          Log in
+        </ButtonA1>
+        <OrDivide />
+        <ButtonA1 className=" bg-white ">Continue with Facebook</ButtonA1>
+        <ButtonA1 className=" bg-white ">Continue with Google</ButtonA1>
+        <ButtonA1 className="bg-white">Conintue with Apple</ButtonA1>
+      </form>
+    );
+  }
+}
+interface Props2 {
+  text?: string;
+}
+function OrDivide({ text = "or" }: Props2) {
+  return (
+    <div className="w-full flex py-2 items-center">
+      <div className="bg-gray-200 shadow h-[1px] w-full ml-2" />
+      <p className="mx-2 text-slate-500 text-sm">{text}</p>
+      <div className="bg-gray-200 shadow h-[1px] w-full ml-2" />
+    </div>
+  );
+}
+interface Props {
+  className?: string;
+  children?: React.ReactNode;
+}
+function ButtonA1({ className, children }: Props) {
+  return (
+    <button
+      className={
+        "cursor-pointer border border-slate-300 shadow-sm  w-full py-2 rounded-lg -mt-3 " +
+        className
+      }
+    >
+      {children}
+    </button>
+  );
+}
+interface Props3 {
+  type: string;
+  placeholder?: string;
+  className?: string;
+}
+function InputA1({ type, placeholder, className }: Props3) {
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      className={
+        "cursor-auto  border-gray-300  w-full py-2 rounded-md placeholder:text-black placeholder:text-opacity-30 placeholder:font-light " +
+        className
+      }
+    />
   );
 }
