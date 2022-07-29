@@ -252,7 +252,7 @@ function EditProfile() {
 
             <div className="col-span-12 sm:col-span-6">
               <EditInput
-                title="lost name"
+                title="Last name"
                 type="text"
                 name="last-name"
                 id="last-name"
