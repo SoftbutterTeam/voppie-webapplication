@@ -7,10 +7,10 @@ import { CenteredLayout } from "../../../layouts/page-layout/centered.layout";
 
 export function LoginPage() {
   return (
-    <LeftPanelledLayout secondaryContent={secondaryContent}>
+    <CenteredLayout>
       <LoginPanel />
       <TermsandconditionText />
-    </LeftPanelledLayout>
+    </CenteredLayout>
   );
 
   function secondaryContent() {
