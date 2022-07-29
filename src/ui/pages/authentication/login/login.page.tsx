@@ -45,7 +45,7 @@ function LoginPanel() {
     <div className="max-w-md overflow-hidden rounded-xl border bg-white shadow-black  shaodw-md text-center py-5 ">
       <h1 className="text-xl font-bold mt-5 "> Log in to Voppie</h1>
       <Loginform />
-      <p className="text-sm">
+      <p className="text-sm text-slate-800 ">
         Don't have an account yet?{" "}
         <span className="text-sm cursor-pointer hover:underline">Join</span>
       </p>
@@ -58,7 +58,7 @@ function LoginPanel() {
         <InputA1 type="email" placeholder="email address" />
         <InputA1 type="password" placeholder="password" />
         {hasEmailLoginError() && (
-          <p className="text-sm text-gray-300 hover:text-gray-500 hover:underline cursor-pointer duration-300">
+          <p className="text-sm text-slate-800 cursor-pointer duration-300">
             Forgot password?
           </p>
         )}
