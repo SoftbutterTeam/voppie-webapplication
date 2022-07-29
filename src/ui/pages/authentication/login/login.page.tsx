@@ -3,14 +3,19 @@ import { LeftPanelledLayout } from "../../../layouts/page-layout";
 
 import { FaApple } from "react-icons/fa";
 import { googleI } from "../../../../assets/icons/services";
+import { CenteredLayout } from "../../../layouts/page-layout/centered.layout";
 
 export function LoginPage() {
   return (
-    <LeftPanelledLayout>
+    <LeftPanelledLayout secondaryContent={secondaryContent}>
       <LoginPanel />
       <TermsandconditionText />
     </LeftPanelledLayout>
   );
+
+  function secondaryContent() {
+    return <div className=""></div>;
+  }
 
   function TermsandconditionText() {
     return (
