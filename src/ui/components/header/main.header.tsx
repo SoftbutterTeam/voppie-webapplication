@@ -13,6 +13,29 @@ export function FullHeader() {
         </div>
       </div>
       <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
+        <button
+          type="button"
+          className="font-semibold text-md text-orange-800 ml-4  rounded hover:text-orange-600"
+        >
+          {" "}
+          Log in
+        </button>
+        <button
+          type="button"
+          className="font-semibold text-md text-orange-800 border rounded p-2 px-4   ml-4 hover:outline-none hover:ring-1 hover:ring-offset-2 hover:ring-orange-600 hover:text-orange-600"
+        >
+          {" "}
+          Join
+        </button>
+        <button
+          type="button"
+          className="bg-white ml-4 rounded-full flex focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-orange-600  hover:ring-1 hover:ring-offset-2 hover:ring-orange-600"
+          id="user-menu-button"
+          aria-expanded="false"
+          aria-haspopup="menu"
+        >
+          <div className="h-8 w-8 rounded-full bg-slate-200 " />
+        </button>
         <Usermenu />
       </div>
     </HeaderContainer>
@@ -26,7 +49,7 @@ function Usermenu() {
       <div>
         <button
           type="button"
-          className="bg-white rounded-full flex focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-orange-600"
+          className="bg-white rounded-full flex focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-orange-600  hover:ring-1 hover:ring-offset-2 hover:ring-orange-600"
           id="user-menu-button"
           aria-expanded="false"
           aria-haspopup="menu"
@@ -116,7 +139,12 @@ function Searchbar() {
 function Voppielogo() {
   return (
     <div className="flex-shrink-0 flex items-center">
-      <h1 className="font-semibold text-2xl text-orange-800 ">Voppie</h1>
+      <button
+        type="button"
+        className="font-semibold text-2xl text-orange-800 hover:text-orange-600 "
+      >
+        Voppie
+      </button>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { FullHeader as PrimHeader } from "../../components/header/prim.header";
+import { FullHeader } from "../../components/header/main.header";
 
 interface Props {
   children?: React.ReactElement;
@@ -6,7 +6,7 @@ interface Props {
 export function MinimalLayout({ children: content }: Props) {
   return (
     <>
-      <PrimHeader />
+      <FullHeader />
       <>{content}</>
     </>
   );
