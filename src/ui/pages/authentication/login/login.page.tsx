@@ -4,7 +4,7 @@ import { LeftPanelledLayout } from "../../../layouts/page-layout";
 import { FaApple, FaFacebookF } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
 
-import { googleI } from "../../../../assets/icons/services";
+import { googleI, googleC } from "../../../../assets/icons/services";
 import { CenteredLayout } from "../../../layouts/page-layout/centered.layout";
 
 export function LoginPage() {
@@ -58,31 +58,45 @@ function LoginPanel() {
         <InputA1 type="email" placeholder="email address" />
         <InputA1 type="password" placeholder="password" />
         {hasEmailLoginError() && (
-          <p className="text-sm text-gray-300 hover:text-gray-500 hover:underline cursor-pointer duration-300">
+          <p className="text-sm text-gray-500 hover:text-gray-600 hover:underline cursor-pointer duration-300">
             Forgot password?
           </p>
         )}
 
-        <ButtonA1 className=" bg-orange-600 font-medium text-white border-0 ">
+        <ButtonA1 className=" bg-orange-600 hover:scale-105 duration-300 font-medium text-white border-0 ">
           Log in
         </ButtonA1>
         <OrDivide />
         <button className="icon-login-btn group">
-          <FaFacebookF className="icon-login group-hover:text-black duration-300" />
+          <img
+            src={
+              require("../../../../assets/icons/services/facebook-color.svg")
+                .default
+            }
+            className="icon-login group-hover:text-black duration-300  group-hover:opacity-100"
+            alt="facebook"
+          />
           <p className="mx-auto font-medium group-hover:text-black duration-300">
             {" "}
             Continue with Facebook
           </p>
         </button>
         <button className="icon-login-btn group">
-          <AiOutlineGoogle className="icon-login group-hover:text-black duration-300" />
-          <p className="mx-auto font-medium group-hover:text-black duration-300">
+          <img
+            src={
+              require("../../../../assets/icons/services/google-color.svg")
+                .default
+            }
+            className="icon-login group-hover:text-black duration-300"
+            alt="google"
+          />
+          <p className="mx-auto font-medium group-hover:text-black duration-300 ">
             {" "}
             Continue with Google
           </p>
         </button>
         <button className="icon-login-btn group">
-          <FaApple className="icon-login group-hover:text-black duration-300" />
+          <FaApple className="icon-login group-hover:text-black duration-300 " />
           <p className="mx-auto font-medium group-hover:text-black duration-300">
             {" "}
             Continue with Apple
