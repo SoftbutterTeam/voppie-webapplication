@@ -1,3 +1,3 @@
 export { LeftPanelledLayout  } from "./leftpan.layout";
-export { CenteredLayout  } from "./centered.layout";
+export { DecoratedLeftPanalledLayout  } from "./decoratedleftpan.layout";
 export { MinimalLayout } from "./minimal.layout";

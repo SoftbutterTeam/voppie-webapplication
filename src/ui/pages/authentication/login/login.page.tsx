@@ -5,29 +5,27 @@ import { FaApple, FaFacebookF } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
 
 import { googleI, googleC } from "../../../../assets/icons/services";
-import { CenteredLayout } from "../../../layouts/page-layout/centered.layout";
+// import { CenteredLayout } from "../../../layouts/page-layout/centered.layout";
+// import { googleI } from "../../../../assets/icons/services";
+import { DecoratedLeftPanalledLayout } from "../../../layouts/page-layout/decoratedleftpan.layout";
 
 export function LoginPage() {
   return (
-    <CenteredLayout>
+    <DecoratedLeftPanalledLayout>
       <LoginPanel />
       <TermsandconditionText />
-    </CenteredLayout>
+    </DecoratedLeftPanalledLayout>
   );
-
-  function secondaryContent() {
-    return <div className=""></div>;
-  }
 
   function TermsandconditionText() {
     return (
-      <p className="max-w-[450px] w-full mx-auto  absolute bottom-20  px-5 text-center text-ti font-light text-neutral-400">
+      <p className="max-w-[450px] w-full mx-auto  md:absolute bottom-20  px-5 text-center text-ti font-light text-neutral-400">
         By joining Voppie, you agree to our{" "}
-        <span className="font-light underline hover:text-black cursor-pointer duration-300">
+        <span className="font-light text-orange-600 cursor-pointer ">
           Terms & Conditions
         </span>{" "}
         and{" "}
-        <span className="font-light underline hover:text-black cursor-pointer duration-300">
+        <span className="font-light  text-orange-600 cursor-pointer ">
           Privacy Policy
         </span>
         .
@@ -45,9 +43,9 @@ function LoginPanel() {
     <div className="max-w-md overflow-hidden rounded-xl border bg-white shadow-black  shaodw-md text-center py-5 ">
       <h1 className="text-xl font-bold mt-5 "> Log in to Voppie</h1>
       <Loginform />
-      <p className="text-sm">
+      <p className="text-sm text-slate-800 ">
         Don't have an account yet?{" "}
-        <span className="text-sm cursor-pointer hover:underline">Join</span>
+        <span className="text-sm  cursor-pointer text-orange-600">Join</span>
       </p>
     </div>
   );
@@ -58,7 +56,7 @@ function LoginPanel() {
         <InputA1 type="email" placeholder="email address" />
         <InputA1 type="password" placeholder="password" />
         {hasEmailLoginError() && (
-          <p className="text-sm text-gray-500 hover:text-gray-600 hover:underline cursor-pointer duration-300">
+          <p className="text-sm text-slate-800 cursor-pointer ">
             Forgot password?
           </p>
         )}
