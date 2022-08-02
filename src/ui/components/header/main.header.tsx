@@ -14,7 +14,7 @@ export function FullHeader() {
       </div>
       <button
           type="button"
-          className="z-40 font-semibold text-md text-orange-800 ml-4  rounded hover:text-orange-600"
+          className="z-40 font-semibold text-md text-orange-800 ml-4  rounded hover:text-orange-600 lg:hidden"
         >
           {" "}
           Log in
