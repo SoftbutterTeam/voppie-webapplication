@@ -1,13 +1,8 @@
-import React from "react";
-import { LeftPanelledLayout } from "../../../layouts/page-layout";
+import { FaApple } from "react-icons/fa";
 
-import { FaApple, FaFacebookF } from "react-icons/fa";
-import { AiOutlineGoogle } from "react-icons/ai";
-
-import { googleI, googleC } from "../../../../assets/icons/services";
-// import { CenteredLayout } from "../../../layouts/page-layout/centered.layout";
-// import { googleI } from "../../../../assets/icons/services";
+import { googleC, facebookColor } from "../../../../assets/icons/services";
 import { DecoratedLeftPanalledLayout } from "../../../layouts/page-layout/decoratedleftpan.layout";
+import { useNavigate } from "react-router";
 
 export function LoginPage() {
   return (
@@ -21,11 +16,11 @@ export function LoginPage() {
     return (
       <p className="max-w-[450px] w-full mx-auto  md:absolute bottom-20  px-5 text-center text-ti font-light text-neutral-400">
         By joining Voppie, you agree to our{" "}
-        <span className="font-light text-orange-600 cursor-pointer ">
+        <span className="font-light text-secondary cursor-pointer ">
           Terms & Conditions
         </span>{" "}
         and{" "}
-        <span className="font-light  text-orange-600 cursor-pointer ">
+        <span className="font-light  text-secondary cursor-pointer ">
           Privacy Policy
         </span>
         .
@@ -35,6 +30,7 @@ export function LoginPage() {
 }
 
 function LoginPanel() {
+  const navigate = useNavigate();
   function hasEmailLoginError(): boolean {
     return true;
   }
@@ -45,7 +41,12 @@ function LoginPanel() {
       <Loginform />
       <p className="text-sm text-slate-800 ">
         Don't have an account yet?{" "}
-        <span className="text-sm  cursor-pointer text-orange-600">Join</span>
+        <span
+          className="text-sm  cursor-pointer text-secondary"
+          onClick={() => navigate("/join")}
+        >
+          Join
+        </span>
       </p>
     </div>
   );
@@ -53,49 +54,47 @@ function LoginPanel() {
   function Loginform() {
     return (
       <form className="max-w-sm w-full mx-auto p-8 space-y-4  ">
-        <InputA1 type="email" placeholder="email address" />
-        <InputA1 type="password" placeholder="password" />
+        <input
+          type="email"
+          placeholder="email address"
+          className="main-input"
+        />
+        <input type="password" placeholder="password" className="main-input" />
         {hasEmailLoginError() && (
           <p className="text-sm text-slate-800 cursor-pointer ">
             Forgot password?
           </p>
         )}
 
-        <ButtonA1 className=" bg-orange-600 hover:scale-105 duration-300 font-medium text-white border-0 ">
+        <button className="main-btn bg-primary hover:scale-105 duration-300 font-medium text-white border-0 ">
           Log in
-        </ButtonA1>
+        </button>
         <OrDivide />
         <button className="icon-login-btn group">
           <img
-            src={
-              require("../../../../assets/icons/services/facebook-color.svg")
-                .default
-            }
-            className="icon-login group-hover:text-black duration-300  group-hover:opacity-100"
+            src={facebookColor}
+            className="icon-login  duration-300"
             alt="facebook"
           />
-          <p className="mx-auto font-medium group-hover:text-black duration-300">
+          <p className="mx-auto font-medium duration-300">
             {" "}
             Continue with Facebook
           </p>
         </button>
         <button className="icon-login-btn group">
           <img
-            src={
-              require("../../../../assets/icons/services/google-color.svg")
-                .default
-            }
-            className="icon-login group-hover:text-black duration-300"
+            src={googleC}
+            className="icon-login duration-300"
             alt="google"
           />
-          <p className="mx-auto font-medium group-hover:text-black duration-300 ">
+          <p className="mx-auto font-medium duration-300 ">
             {" "}
             Continue with Google
           </p>
         </button>
         <button className="icon-login-btn group">
-          <FaApple className="icon-login group-hover:text-black duration-300 " />
-          <p className="mx-auto font-medium group-hover:text-black duration-300">
+          <FaApple className="icon-login duration-300 " />
+          <p className="mx-auto font-medium duration-300">
             {" "}
             Continue with Apple
           </p>
@@ -114,30 +113,5 @@ function OrDivide({ text = "or" }: Props2) {
       <p className="mx-2 text-slate-500 text-sm">{text}</p>
       <div className="bg-gray-200 shadow h-[1px] w-full mr-2" />
     </div>
-  );
-}
-interface Props {
-  className?: string;
-  children?: React.ReactNode;
-}
-function ButtonA1({ className, children }: Props) {
-  return <button className={"main-btn " + className}>{children}</button>;
-}
-
-interface Props3 {
-  type: string;
-  placeholder?: string;
-  className?: string;
-}
-function InputA1({ type, placeholder, className }: Props3) {
-  return (
-    <input
-      type={type}
-      placeholder={placeholder}
-      className={
-        "cursor-auto  border-gray-300  w-full py-2 rounded-md placeholder:text-black placeholder:text-opacity-30 placeholder:font-light " +
-        className
-      }
-    />
   );
 }

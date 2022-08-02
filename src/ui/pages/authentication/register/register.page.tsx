@@ -2,10 +2,11 @@ import React from "react";
 import { LeftPanelledLayout } from "../../../layouts/page-layout";
 
 import { FaApple, FaFacebookF } from "react-icons/fa";
+import { googleC, facebookColor } from "../../../../assets/icons/services";
 import { AiOutlineGoogle } from "react-icons/ai";
 
-import { googleI } from "../../../../assets/icons/services";
 import { DecoratedLeftPanalledLayout } from "../../../layouts/page-layout/decoratedleftpan.layout";
+import { useNavigate } from "react-router";
 
 export function RegisterPage() {
   return (
@@ -19,11 +20,11 @@ export function RegisterPage() {
     return (
       <p className="max-w-[450px] w-full mx-auto  md:absolute bottom-20  px-5 text-center text-ti font-light text-neutral-400">
         By joining Voppie, you agree to our{" "}
-        <span className="font-light text-orange-600 cursor-pointer ">
+        <span className="font-light text-secondary cursor-pointer ">
           Terms & Conditions
         </span>{" "}
         and{" "}
-        <span className="font-light  text-orange-600 cursor-pointer ">
+        <span className="font-light  text-secondary cursor-pointer ">
           Privacy Policy
         </span>
         .
@@ -33,6 +34,7 @@ export function RegisterPage() {
 }
 
 function LoginPanel() {
+  const navigate = useNavigate();
   //* border can be removed - it was meant for popup design demostration. but that will be in a parent emelent to loginpanel
   return (
     <div className="max-w-md overflow-hidden rounded-xl border bg-white shadow-black  shaodw-md text-center py-5 ">
@@ -40,7 +42,12 @@ function LoginPanel() {
       <Loginform />
       <p className="text-sm text-slate-800 ">
         Already have an account?{" "}
-        <span className="text-sm  cursor-pointer text-orange-600">Log in</span>
+        <span
+          className="text-sm  cursor-pointer text-secondary"
+          onClick={() => navigate("/login")}
+        >
+          Log in
+        </span>
       </p>
     </div>
   );
@@ -70,21 +77,31 @@ function LoginPanel() {
           //* new-password is for new passwords. current-password is for login page.
         }
 
-        <button className="main-btn  bg-orange-600 font-medium text-white border-0 ">
+        <button className="main-btn  bg-primary font-medium text-white border-0 ">
           Join
         </button>
         <OrDivide />
-
         <button className="icon-login-btn group">
-          <AiOutlineGoogle className="icon-login group-hover:text-black duration-300" />
-          <p className="mx-auto font-medium group-hover:text-black duration-300">
+          <img
+            src={facebookColor}
+            className="icon-login  duration-300"
+            alt="facebook"
+          />
+          <p className="mx-auto font-medium duration-300">
+            {" "}
+            Continue with Facebook
+          </p>
+        </button>
+        <button className="icon-login-btn group">
+          <img src={googleC} className="icon-login duration-300" alt="google" />
+          <p className="mx-auto font-medium duration-300">
             {" "}
             Continue with Google
           </p>
         </button>
         <button className="icon-login-btn group">
-          <FaApple className="icon-login group-hover:text-black duration-300" />
-          <p className="mx-auto font-medium group-hover:text-black duration-300">
+          <FaApple className="icon-login duration-300" />
+          <p className="mx-auto font-medium duration-300">
             {" "}
             Continue with Apple
           </p>
