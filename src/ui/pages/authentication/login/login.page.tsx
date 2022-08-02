@@ -1,10 +1,8 @@
 import React from "react";
-import { LeftPanelledLayout } from "../../../layouts/page-layout";
 
 import { FaApple, FaFacebookF } from "react-icons/fa";
 import { AiOutlineGoogle } from "react-icons/ai";
 
-import { googleI } from "../../../../assets/icons/services";
 import { DecoratedLeftPanalledLayout } from "../../../layouts/page-layout/decoratedleftpan.layout";
 
 export function LoginPage() {
