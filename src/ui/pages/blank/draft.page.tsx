@@ -1,11 +1,11 @@
-import { MinimalLayout } from "../../layouts/page-layout";
+import { SingleLayout } from "../../layouts/page-layout";
 
 export default function DraftPage() {
   return (
     <div>
-      <MinimalLayout>
+      <SingleLayout>
         <div></div>
-      </MinimalLayout>
+      </SingleLayout>
     </div>
   );
 }

@@ -6,6 +6,8 @@ import DraftPage from "./ui/pages/blank/draft.page";
 function AppRoutes() {
   return (
     <Routes>
+      <Route path="login" element={<LoginPage />} />
+      <Route path="join" element={<RegisterPage />} />
       <Route path="" element={<DraftPage />} />
       <Route path="home" element={<></>} />
       <Route path="myprofile" element={<></>} />
