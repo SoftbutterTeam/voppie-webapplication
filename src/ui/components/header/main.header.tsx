@@ -12,8 +12,15 @@ export function FullHeader() {
           <Searchbar />
         </div>
       </div>
+      <button
+          type="button"
+          className="z-40 font-semibold text-md text-orange-800 ml-4  rounded hover:text-orange-600"
+        >
+          {" "}
+          Log in
+        </button>
       <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
-        <button
+      <button
           type="button"
           className="font-semibold text-md text-orange-800 ml-4  rounded hover:text-orange-600"
         >
