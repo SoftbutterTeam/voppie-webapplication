@@ -14,7 +14,7 @@ export function FullHeader() {
       </div>
       <button
           type="button"
-          className="z-40 font-semibold text-md text-orange-800 ml-4  rounded hover:text-orange-600 lg:hidden"
+          className="z-40 font-semibold text-md text-primary ml-4  rounded hover:text-secondary lg:hidden"
         >
           {" "}
           Log in
@@ -22,21 +22,21 @@ export function FullHeader() {
       <div className="hidden lg:relative lg:z-10 lg:ml-4 lg:flex lg:items-center">
       <button
           type="button"
-          className="font-semibold text-md text-orange-800 ml-4  rounded hover:text-orange-600"
+          className="font-semibold text-md text-primary ml-4  rounded hover:text-secondary"
         >
           {" "}
           Log in
         </button>
         <button
           type="button"
-          className="font-semibold text-md text-orange-800 border rounded p-2 px-4   ml-4 hover:outline-none hover:ring-1 hover:ring-offset-2 hover:ring-orange-600 hover:text-orange-600"
+          className="font-semibold text-md text-primary border rounded p-2 px-4   ml-4 hover:outline-none hover:ring-1 hover:ring-offset-2 hover:ring-secondary hover:text-secondary"
         >
           {" "}
           Join
         </button>
         <button
           type="button"
-          className="bg-white ml-4 rounded-full flex focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-orange-600  hover:ring-1 hover:ring-offset-2 hover:ring-orange-600"
+          className="bg-white ml-4 rounded-full flex focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-secondary  hover:ring-1 hover:ring-offset-2 hover:ring-secondary"
           id="user-menu-button"
           aria-expanded="false"
           aria-haspopup="menu"
@@ -56,7 +56,7 @@ function Usermenu() {
       <div>
         <button
           type="button"
-          className="bg-white rounded-full flex focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-orange-600  hover:ring-1 hover:ring-offset-2 hover:ring-orange-600"
+          className="bg-white rounded-full flex focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-secondary  hover:ring-1 hover:ring-offset-2 hover:ring-secondary"
           id="user-menu-button"
           aria-expanded="false"
           aria-haspopup="menu"
@@ -133,7 +133,7 @@ function Searchbar() {
         <input
           id="search"
           name="search"
-          className="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-orange-600  focus:border-transparent  sm:text-sm"
+          className="block w-full bg-white border border-gray-300 rounded-md py-2 pl-10 pr-3 text-sm placeholder-gray-500 focus:outline-none focus:text-gray-900 focus:placeholder-gray-400 focus:ring-1 focus:ring-secondary  focus:border-transparent  sm:text-sm"
           placeholder=""
           type="search"
           autoComplete="off"
@@ -148,7 +148,7 @@ function Voppielogo() {
     <div className="flex-shrink-0 flex items-center">
       <button
         type="button"
-        className="font-semibold text-2xl text-orange-800 hover:text-orange-600 "
+        className="font-semibold text-2xl text-primary hover:text-secondary "
       >
         Voppie
       </button>
