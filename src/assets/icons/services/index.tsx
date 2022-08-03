@@ -1,10 +1,11 @@
-var googleI = require("./google-icon.svg").default;
-var googleC = require("./google-color.svg").default;
+var googleC = require("./google-logo.svg").default;
 
-export { googleI, googleC };
+export { googleC };
 
-var facebook = require("./facebook.svg").default;
-var facebookC = require("./facebook-color.svg").default;
-var facebookColor = require("./facebook-2.svg").default;
+var facebookColor = require("./facebook-logo.svg").default;
 
-export { facebook, facebookC, facebookColor };
+export { facebookColor };
+
+var apple = require("./apple-logo.svg").default;
+
+export { apple };
