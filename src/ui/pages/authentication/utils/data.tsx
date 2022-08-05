@@ -4,7 +4,13 @@ import {
   googleC,
 } from "../../../../assets/icons/services";
 
-export const loginButtonsData = [
+export interface LoginButtonsDataTypes {
+  icon?: string | any;
+  title?: string;
+  alt?: string;
+}
+
+export const AuthServiceOpts = [
   {
     icon: facebookColor,
     title: "Continue with Facebook",
@@ -20,4 +26,4 @@ export const loginButtonsData = [
     title: "Continue with Apple",
     alt: "apple",
   },
-];
+] as LoginButtonsDataTypes[];

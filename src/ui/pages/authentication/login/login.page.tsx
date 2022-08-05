@@ -1,5 +1,6 @@
 import { DecoratedLeftPanalledLayout } from "../../../layouts/page-layout/decoratedleftpan.layout";
-import { TermsandconditionText, LoginPanel } from "../../../components/login";
+import { TermsandconditionText } from "../shared";
+import { LoginPanel } from "./components";
 
 export function LoginPage() {
   return (

@@ -1,6 +1,8 @@
-import { OrDivideText } from "./utils/types";
+export interface Props {
+  text?: string;
+}
 
-function OrDivide({ text = "or" }: OrDivideText) {
+export function OrDivide({ text = "or" }: Props) {
   return (
     <div className="w-full flex py-2 items-center">
       <div className="bg-gray-200 shadow h-[1px] w-full ml-2" />
@@ -9,5 +11,3 @@ function OrDivide({ text = "or" }: OrDivideText) {
     </div>
   );
 }
-
-export default OrDivide;

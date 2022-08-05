@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router";
-import { OrDivide } from "./";
-import { loginButtonsData } from "./utils/data";
-import { LoginButtonsDataTypes } from "./utils/types";
+import { OrDivide } from "../../shared";
+import { AuthServiceOpts } from "../../utils/data";
 
-export default function LoginPanel() {
+export function LoginPanel() {
   const navigate = useNavigate();
+
   function hasEmailLoginError(): boolean {
     return true;
   }
-  //* border can be removed - it was meant for popup design demostration. but that will be in a parent emelent to loginpanel
+
   return (
     <div className="max-w-md overflow-hidden rounded-xl border bg-white shadow-black  shaodw-md text-center py-5 ">
       <h1 className="text-xl font-bold mt-5 "> Log in to Voppie</h1>
@@ -44,7 +44,7 @@ export default function LoginPanel() {
           Log in
         </button>
         <OrDivide />
-        {loginButtonsData.map((item: LoginButtonsDataTypes, index) => (
+        {AuthServiceOpts.map((item, index) => (
           <button className="icon-login-btn group" key={index}>
             <img
               src={item?.icon}
