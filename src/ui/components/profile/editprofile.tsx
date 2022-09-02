@@ -36,7 +36,7 @@ function EditProfile() {
   const [user, setUser] = useState(userInfo);
   const [dateError, setDateError] = useState("");
   const [genderError, setGenderError] = useState("");
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -205,7 +205,7 @@ function EditProfile() {
         {/* Profile section */}
         <div className="py-6 px-4 sm:p-6 lg:pb-8">
           <div className="mt-6 flex-grow lg:mt-0 lg:ml-6 lg:flex-grow-0 lg:flex-shrink-0">
-            <div className="mt-1 lg:hidden relative">
+            <div className="mt-1  relative">
               <div className="flex items-center">
                 <div
                   className="flex-shrink-0 inline-block rounded-full overflow-hidden h-32 w-32 "
