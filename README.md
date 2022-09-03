@@ -5,7 +5,7 @@ Voppie - a viynl-mix collection social network and store. Primarily, users can c
 Comptine - a genesis point for projects requiring basic authentication, user profile features and solid server-client architecture. A solid, clean foundation for qaulity projects to branch from.
 - note: this is only the first milestone for voppie, as would be any project. once compelete will be taken to its own repo.
 
-backend repo: [repo](https://github.com/SoftbutterTeam/voppie-functions)
+backend repo: [voppie-functions](https://github.com/SoftbutterTeam/voppie-functions)
 
 Stack technologies: React-ts, Tailwind, Express-ts, Firebase, Strapio
 (my prefered stack - finally getting a clean demonstration of it all)
