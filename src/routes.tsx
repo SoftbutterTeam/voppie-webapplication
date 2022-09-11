@@ -6,7 +6,7 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="" element={<Blank />} />
-      <Route path="home" element={<></>} />
+      <Route path="placeholder" element={<></>} />
       <Route path="myprofile" element={<></>} />
       <Route path="login" element={<LoginPage />} />
       <Route path="join" element={<RegisterPage />} />
