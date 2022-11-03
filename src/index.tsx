@@ -6,11 +6,7 @@ import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className="h-full ">
-      <div className="h-full">
-        <App />
-      </div>
-    </div>
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

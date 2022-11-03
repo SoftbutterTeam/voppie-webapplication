@@ -4,8 +4,8 @@ interface Props {
 
 export function AppContainer(props: Props) {
   return (
-    <div className="  max-w-screen min-h-screen bg-white  lg:p-0 overflow-scroll relative">
-      <div className="min-w-[300] max-w-screen w-full">{props.children}</div>
+    <div className="  bg-white  lg:p-0 overflow-scroll relative">
+      <div className="min-w-[400]">{props.children}</div>
     </div>
   );
 }
